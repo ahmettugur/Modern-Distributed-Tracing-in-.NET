@@ -7,6 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "frontend", "frontend\fronte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "storage", "storage\storage.csproj", "{B31CB9E7-9F25-4BF2-9CE7-5730A5577E1A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{3924AB23-97AF-4CC3-B674-5E8B58B89BBA}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose-dotnet-monitor.yml = docker-compose-dotnet-monitor.yml
+		docker-compose-otel.yml = docker-compose-otel.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
