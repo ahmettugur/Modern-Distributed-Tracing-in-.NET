@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "frontend", "frontend\fronte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "storage", "storage\storage.csproj", "{B31CB9E7-9F25-4BF2-9CE7-5730A5577E1A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{17452429-FB74-4AA2-B6C1-FB81038F2C3A}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

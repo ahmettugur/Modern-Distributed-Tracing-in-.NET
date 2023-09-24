@@ -53,7 +53,8 @@ static void ConfigureTelemetry(WebApplicationBuilder builder)
     {
         options.AddOtlpExporter((exporterOptions, _) =>
         {
-            exporterOptions.Endpoint = new Uri("http://localhost:4317");
+            var uriEnv = Environment.GetEnvironmentVariable("OTEL_EXPORTER_OTLP_ENDPOINT") ?? "http://localhost:4317";
+            exporterOptions.Endpoint = new Uri(uriEnv);
         });
     });
 }
