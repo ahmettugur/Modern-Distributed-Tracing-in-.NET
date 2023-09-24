@@ -49,7 +49,15 @@ static void ConfigureTelemetry(WebApplicationBuilder builder)
             .AddJaegerExporter()
             .AddHttpClientInstrumentation()
             .AddAspNetCoreInstrumentation()
+            .AddSqlClientInstrumentation()
+            .AddSqlClientInstrumentation(opt =>
+            {
+                opt.SetDbStatementForText = true;
+                opt.EnableConnectionLevelAttributes = true;
+                opt.SetDbStatementForStoredProcedure = true;
+            })
             .AddEntityFrameworkCoreInstrumentation())
+
         .WithMetrics(meterProviderBuilder => meterProviderBuilder
             .AddPrometheusExporter()
             .AddHttpClientInstrumentation()
