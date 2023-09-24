@@ -50,5 +50,10 @@ static void ConfigureTelemetry(WebApplicationBuilder builder)
             .AddAspNetCoreInstrumentation());
         
     builder.Logging.AddOpenTelemetry(options =>
-        options.AddOtlpExporter());
+    {
+        options.AddOtlpExporter((exporterOptions, _) =>
+        {
+            exporterOptions.Endpoint = new Uri("http://localhost:4317");
+        });
+    });
 }
